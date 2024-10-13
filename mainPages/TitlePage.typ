@@ -1,32 +1,34 @@
+#import "/variables.typ": *
+
 #page(header: none)[
   #set align(center)
 
     #image("/images/ktu-logo.png", width: 2cm)
     #set text(size:12pt)
     *Kauno technologijos universitetas*\
-    Informatikos fakultetas\
+    #ProjectFaculty\
 
     #align(center + horizon)[
       #set text(size: 18pt, weight: "bold")
-      Labai ilgas bakalauro pavadinimas
+      #ProjectName
     ]
     #set text(size:14pt)
-    Baigiamasis bakalauro studijų projektas
+    #ProjectType
     
     #v(3cm)
     
     #set text(size:12pt)
-    *Vardas Pavardė*\
-    Projekto autorius
+    *#AuthorName.at(1)*\
+    Projekto #AuthorName.at(0)
 
     #v(1cm)
     
-    *lekt. Vardenis Pavardenis*\
-    Vadovas
+    *#ProjectSupervisor.at(1)*\
+    #ProjectSupervisor.at(0)
 
     #v(2cm)
     
   #align(bottom)[
-    *Kaunas, 2024*
+    *#ProjectCity, #ProjectYear*
   ]
 ]

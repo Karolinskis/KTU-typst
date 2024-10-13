@@ -1,12 +1,19 @@
+#import "/variables.typ" : *
+
 #page(header: none)[
   #set text(size: 12pt)
-  Author’s surname, name. Title of the Final Degree Project. Bachelor's / Master's Final Degree Project / Final Degree Project of Minor Studies / Professional Studies (choose one) / supervisor abbreviation of the position, name and surname of the supervisor; Name of the Faculty, Kaunas University of Technology.
-  
-  Study field and area (study field group): ................................ (type here).
+  #AuthorName.at(1).
+  #ProjectTitleEN.
+  #ProjectTypeEN.
+  #ProjectSupervisorEN.join(" ").
+  #ProjectFacultyEN, Kaunas University of Technology.
 
-  Keywords: ................................ (type here).
+  Study field and area: #ProjectStudyFieldAndAreaEN.
 
-  Town, Year. Number of pages.
+  Keywords: #ProjectKeywordsEN.
+
+  #ProjectCity, #ProjectYear.
+  #context counter(page).final().at(0) pages.
 
   #set align(center)
     *Summary*

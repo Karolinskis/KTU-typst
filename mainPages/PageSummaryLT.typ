@@ -1,12 +1,19 @@
+#import "/variables.typ": *
+
 #page(header: none)[
   #set text(size: 12pt)
-  Autoriaus pavardė, vardas. Baigiamojo projekto pavadinimas. Bakalauro / Magistro / Profesinių studijų / Gretutinės krypties studijų (pasirinkite) baigiamasis projektas / vadovas / vadovė doc. dr. Vardenis Pavardenis; Kauno technologijos universitetas, ................................(įrašykite) fakultetas.
-  
-  Studijų kryptis ir sritis (studijų krypčių grupė): ................................(įrašykite).
+  #AuthorName.at(1).
+  #ProjectTitle.
+  #ProjectType.
+  #ProjectSupervisor.join(" ").
+  #ProjectFaculty, Kauno technologijos universitetas.
 
-  Reikšminiai žodžiai: ................................(įrašykite). 
+  Studijų kryptis ir sritis: #ProjectStudyFieldAndArea.
 
-  Miestas, 20XX. XX p.
+  Reikšminiai žodžiai: #ProjectKeywords.
+
+  #ProjectCity, #ProjectYear.
+  #context counter(page).final().at(0) p.
 
   #set align(center)
     *Santrauka*

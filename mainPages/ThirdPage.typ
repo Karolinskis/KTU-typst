@@ -1,17 +1,19 @@
+#import "/variables.typ" : *
+
 #page(header: none)[
   #set text(size:12pt, spacing: 0.28em)
   #set align(center)
 
     #image("/images/ktu-logo.png", width: 2cm)
     *Kauno technologijos universitetas*\
-    Informatikos fakultetas\
-    Vardenis Pavardenis
+    #ProjectFaculty\
+    #AuthorName.at(1)
 
     #v(2cm)
 
     #align(center + horizon)[
       #set text(size: 18pt, weight: "bold")
-      Labai ilgas bakalauro pavadinimas
+      #ProjectName
     ]
     Akademinio sąžiningumo deklaracija\
     \
@@ -26,6 +28,6 @@
 
     #v(4cm)
     
-    #h(9cm)Vardas Pavardė\
+    #h(9cm)#AuthorName.at(1)\
     #h(9cm)_Patvirtinta elektroniniu būdu_
 ]
